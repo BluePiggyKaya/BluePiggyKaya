@@ -38,6 +38,16 @@ A turn-based tactics RPG built on our own engine with no commercial game engine:
 - **Editor:** built the prefab editor (create, save and place reusable objects) and the editor camera in the ImGui level editor.
 - **UI and gameplay polish:** movement and attack range tints, health bars, the skills page, How to Play, win and lose screens, and audio settings.
 
+### Seam Carving: Content-Aware Image Resizing
+`Python` `NumPy` `OpenCV` `Streamlit` · team of 6 · Nov 2026 · [repo](https://github.com/R15hika/seam-carving)
+
+An algorithms project that resizes images without squashing what matters, by removing the lowest-energy "seams" of pixels. Three seam finders (dynamic programming, greedy and graph cut) are compared in an interactive demo app. **I owned the dynamic programming seam finder:**
+
+- Wrote the DP recurrence with backtracking, vectorised with NumPy so each row is computed in one step instead of pixel by pixel, plus horizontal seams by reusing the vertical finder on the transposed image
+- Made the demo app safer to use: rejects images it can't decode, shows how many seams a resize will remove, warns before slow DP resizes, stops graph cut on images it can't handle, and reports how long each resize took
+
+▶️ [Watch the demo](https://youtu.be/3gPar0sKfHI)
+
 ### Sudoku Rush: Networked Multiplayer Game
 `C++` `Win32` `TCP/UDP` `SQLite` · team of 2 · Mar 2026
 
@@ -53,7 +63,7 @@ Handled support tickets across Cisco Meraki, Palo Alto, Juniper and F5, alerted 
 ## 🛠️ Tech stack
 
 <p>
-  <img src="https://skillicons.dev/icons?i=cpp,c,cs,opengl,unity,qt,cmake,visualstudio,linux,aws,dart,androidstudio,sqlite,html,git&theme=dark"/>
+  <img src="https://skillicons.dev/icons?i=cpp,c,cs,py,opengl,unity,qt,cmake,visualstudio,linux,aws,dart,androidstudio,sqlite,html,git&theme=dark"/>
 </p>
 
 <!-- SNAKE: uncomment after the snake workflow has run once
