@@ -28,6 +28,16 @@ A training simulator where operators run a fleet of autonomous shuttles through 
 - **Milestone 2: vehicles and vehicle AI** (Unity, C#). Brought textured car, taxi, bus, truck and van models into the city. Drew them with GPU instancing and per-camera frustum culling, so only what a camera can see gets drawn. Traffic follows the backend's simulation when it sends frames. When it doesn't, my fallback driver takes over: it picks routes at junctions, avoids roads with hazards, keeps large vehicles off service roads, and smooths lane changes so cars steer instead of snapping.
 - **Milestone 3: pedestrians and pedestrian AI** (Unity, C#). Built a walkable network of pavements beside every road and joined it at junction corners. People cross only at mapped crossings, and at signalled ones only while the traffic they cross has a red light. Each character model is baked into a few walk and idle poses and drawn as batched instances, with no per-person GameObjects, Animators or skinning, so a whole crowd stays cheap to draw.
 
+### Struct Squad: Turn-Based Grid RPG on a Custom C++ Engine
+`C++` `OpenGL` `GLSL` `ImGui` `CMake` · team of 9 · Sep 2025 to Apr 2026 · [repo](https://github.com/ethanngyl/Gam200Test)
+
+A turn-based tactics RPG built on our own engine with no commercial game engine: grid movement, A* enemy pathfinding, a procedurally generated map, bosses, skill selection and controller support. **I worked on the graphics, the editor tools and the in-game UI** (113 commits):
+
+- **Renderer:** wrote the OpenGL graphics system with GLSL shaders, textures, and mesh and material handles. Added multiple shaders, the camera system with camera clamping, and text rendering with TrueType fonts.
+- **Optimisation:** batched draws by mesh, material and texture, and moved per-object transforms into instanced buffers (an SSBO), so each batch is drawn in one call instead of one call per object.
+- **Editor:** built the prefab editor (create, save and place reusable objects) and the editor camera in the ImGui level editor.
+- **UI and gameplay polish:** movement and attack range tints, health bars, the skills page, How to Play, win and lose screens, and audio settings.
+
 ### Sudoku Rush: Networked Multiplayer Game
 `C++` `Win32` `TCP/UDP` `SQLite` · team of 2 · Mar 2026
 
