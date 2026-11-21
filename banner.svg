@@ -1,0 +1,102 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="340" viewBox="0 0 1200 340">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#070b18"/>
+      <stop offset="1" stop-color="#0d1630"/>
+    </linearGradient>
+    <linearGradient id="name" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#5eead4"/>
+      <stop offset="1" stop-color="#60a5fa"/>
+    </linearGradient>
+    <linearGradient id="fade" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#070b18" stop-opacity="1"/>
+      <stop offset="1" stop-color="#070b18" stop-opacity="0"/>
+    </linearGradient>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="3" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <clipPath id="type">
+      <rect x="40" y="178" height="32" width="0">
+        <animate attributeName="width" values="0;540;540;0" keyTimes="0;0.4;0.9;1" dur="8s" repeatCount="indefinite"/>
+      </rect>
+    </clipPath>
+  </defs>
+
+  <rect width="1200" height="340" rx="14" fill="url(#bg)"/>
+
+  <!-- ===== map (right side) ===== -->
+  <g id="map">
+    <!-- buildings -->
+    <g fill="#0f1c38" stroke="#1d3a66" stroke-width="1.5">
+      <rect x="696" y="96" width="88" height="58" rx="3"/>
+      <rect x="816" y="96" width="98" height="26" rx="3"/>
+      <rect x="816" y="130" width="46" height="24" rx="3"/>
+      <rect x="946" y="96" width="98" height="58" rx="3"/>
+      <rect x="1076" y="96" width="60" height="58" rx="3"/>
+      <rect x="696" y="186" width="40" height="58" rx="3"/>
+      <rect x="744" y="186" width="40" height="58" rx="3"/>
+      <rect x="816" y="186" width="98" height="58" rx="3"/>
+      <rect x="946" y="186" width="60" height="26" rx="3"/>
+      <rect x="1076" y="186" width="60" height="58" rx="3"/>
+      <rect x="816" y="30" width="98" height="34" rx="3"/>
+      <rect x="946" y="30" width="98" height="34" rx="3"/>
+      <rect x="1076" y="30" width="60" height="34" rx="3"/>
+      <rect x="696" y="276" width="88" height="40" rx="3"/>
+      <rect x="946" y="276" width="190" height="40" rx="3"/>
+    </g>
+    <!-- roads -->
+    <g stroke="#2a4a7a" stroke-width="3" stroke-linecap="round">
+      <line x1="640" y1="80" x2="1170" y2="80"/>
+      <line x1="640" y1="170" x2="1170" y2="170"/>
+      <line x1="640" y1="260" x2="1170" y2="260"/>
+      <line x1="680" y1="20" x2="680" y2="330"/>
+      <line x1="800" y1="20" x2="800" y2="330"/>
+      <line x1="930" y1="20" x2="930" y2="330"/>
+      <line x1="1060" y1="20" x2="1060" y2="330"/>
+      <line x1="1152" y1="20" x2="1152" y2="330"/>
+    </g>
+    <!-- route draws itself -->
+    <path d="M 680 330 V 170 H 930 V 80 H 1152" fill="none" stroke="#5eead4" stroke-width="4"
+          stroke-linecap="round" stroke-linejoin="round" filter="url(#glow)"
+          stroke-dasharray="722" stroke-dashoffset="722">
+      <animate attributeName="stroke-dashoffset" values="722;0;0;722" keyTimes="0;0.6;0.9;1" dur="8s" repeatCount="indefinite"/>
+    </path>
+    <!-- vehicle marker follows route -->
+    <g filter="url(#glow)">
+      <circle r="7" fill="#f472b6"/>
+      <circle r="12" fill="none" stroke="#f472b6" stroke-width="2" opacity="0.5"/>
+      <animateMotion path="M 680 330 V 170 H 930 V 80 H 1152" keyPoints="0;1;1;0" keyTimes="0;0.6;0.9;1"
+                     calcMode="linear" dur="8s" repeatCount="indefinite"/>
+    </g>
+    <!-- points of interest -->
+    <g fill="#facc15">
+      <circle cx="740" cy="125" r="4"><animate attributeName="opacity" values="1;0.3;1" dur="2s" repeatCount="indefinite"/></circle>
+      <circle cx="995" cy="125" r="4"><animate attributeName="opacity" values="0.3;1;0.3" dur="2.4s" repeatCount="indefinite"/></circle>
+      <circle cx="865" cy="215" r="4"><animate attributeName="opacity" values="1;0.3;1" dur="1.8s" repeatCount="indefinite"/></circle>
+      <circle cx="1106" cy="215" r="4"><animate attributeName="opacity" values="0.3;1;0.3" dur="2.2s" repeatCount="indefinite"/></circle>
+      <circle cx="1040" cy="296" r="4"><animate attributeName="opacity" values="1;0.3;1" dur="2.6s" repeatCount="indefinite"/></circle>
+    </g>
+    <!-- HUD -->
+    <g font-family="JetBrains Mono, Consolas, 'Courier New', monospace" font-size="12" fill="#7dd3fc">
+      <text x="1166" y="326" text-anchor="end" opacity="0.8">LOD tier 2 · cam: pan/zoom · OpenGL</text>
+    </g>
+    <!-- fade map into text area -->
+    <rect x="560" y="0" width="160" height="340" fill="url(#fade)"/>
+  </g>
+
+  <!-- ===== text (left side) ===== -->
+  <g font-family="JetBrains Mono, Consolas, 'Courier New', monospace">
+    <text x="40" y="70" font-size="18" fill="#4ade80">kahyan@sit-digipen:~$ <tspan fill="#cbd5e1">./map_renderer --whoami</tspan></text>
+    <text x="40" y="150" font-size="64" font-weight="700" fill="url(#name)" filter="url(#glow)">SIM KAH YAN</text>
+    <g clip-path="url(#type)">
+      <text x="40" y="202" font-size="22" fill="#e2e8f0">C++ · OpenGL · Qt · real-time simulation</text>
+    </g>
+    <rect x="40" y="182" width="12" height="26" fill="#5eead4">
+      <animate attributeName="x" values="40;580;580;40" keyTimes="0;0.4;0.9;1" dur="8s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="1;0;1" dur="1s" repeatCount="indefinite"/>
+    </rect>
+    <text x="40" y="250" font-size="16" fill="#64748b">// Year 3 Computer Science (RTIS) @ SIT-DigiPen Singapore</text>
+    <text x="40" y="276" font-size="16" fill="#64748b">// open to IWSP from May 2027</text>
+  </g>
+</svg>
