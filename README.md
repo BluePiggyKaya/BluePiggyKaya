@@ -62,9 +62,13 @@ Handled support tickets across Cisco Meraki, Palo Alto, Juniper and F5, alerted 
 
 ## 🛠️ Tech stack
 
-<p>
-  <img src="https://skillicons.dev/icons?i=cpp,c,cs,py,opengl,unity,qt,cmake,visualstudio,linux,aws,dart,androidstudio,sqlite,html,git&theme=dark"/>
-</p>
+| Area | Tools | Where I used them |
+|---|---|---|
+| **Languages** | <img src="https://skillicons.dev/icons?i=cpp,c,cs,py,html,dart&theme=dark" height="36"/> | C++ engines and renderers, C# in Unity, Python for algorithms |
+| **Graphics & engines** | <img src="https://skillicons.dev/icons?i=opengl,unity,qt&theme=dark" height="36"/> <img src="https://img.shields.io/badge/GLSL-0d1630?style=flat-square&logo=opengl&logoColor=5eead4"/> <img src="https://img.shields.io/badge/ImGui-0d1630?style=flat-square&logo=cplusplus&logoColor=5eead4"/> | OpenGL renderers in Formula 9 and Struct Squad, Unity vehicles and pedestrians |
+| **Data & algorithms** | <img src="https://skillicons.dev/icons?i=sqlite&theme=dark" height="36"/> <img src="https://img.shields.io/badge/NumPy-0d1630?style=flat-square&logo=numpy&logoColor=60a5fa"/> <img src="https://img.shields.io/badge/OpenCV-0d1630?style=flat-square&logo=opencv&logoColor=60a5fa"/> <img src="https://img.shields.io/badge/Streamlit-0d1630?style=flat-square&logo=streamlit&logoColor=60a5fa"/> | Map road database, seam carving |
+| **Networking & cloud** | <img src="https://skillicons.dev/icons?i=aws&theme=dark" height="36"/> <img src="https://img.shields.io/badge/Cisco%20Meraki-0d1630?style=flat-square&logo=cisco&logoColor=f472b6"/> <img src="https://img.shields.io/badge/TCP%2FUDP-0d1630?style=flat-square&logo=socketdotio&logoColor=f472b6"/> <img src="https://img.shields.io/badge/Ekahau-0d1630?style=flat-square&logo=wifi&logoColor=f472b6"/> | Westcon internship, Sudoku Rush |
+| **Tools** | <img src="https://skillicons.dev/icons?i=git,github,cmake,visualstudio,linux,androidstudio&theme=dark" height="36"/> | Team repos with branches and pull requests, CMake builds |
 
 <!-- SNAKE: uncomment after the snake workflow has run once
 <p align="center">
