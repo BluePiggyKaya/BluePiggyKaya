@@ -54,4 +54,4 @@ Handled support tickets across Cisco Meraki, Palo Alto, Juniper and F5, alerted 
 
 ## 📫 Get in touch
 
-Happy to talk about real-time rendering, simulation, or IWSP and internship roles. Email me at **2403246@sit.singaporetech.edu.sg**.
+Happy to talk about real-time rendering, simulation, or IWSP and internship roles. Email me at **simkah222@gmail.com**.
