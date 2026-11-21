@@ -1,32 +1,32 @@
 <p align="center">
-  <img src="banner.svg" alt="Sim Kah Yan: C++, OpenGL, Qt, real-time simulation" width="100%"/>
+  <img src="banner.svg" alt="Sim Kah Yan: C++, OpenGL, Unity, real-time simulation" width="100%"/>
 </p>
 
 <p align="center">
-  <a href="mailto:2403246@sit.singaporetech.edu.sg"><img src="https://img.shields.io/badge/Email-2403246%40sit.singaporetech.edu.sg-0d1630?style=for-the-badge&logo=gmail&logoColor=5eead4"/></a>
+  <a href="mailto:simkah222@gmail.com"><img src="https://img.shields.io/badge/Email-simkah222%40gmail.com-0d1630?style=for-the-badge&logo=gmail&logoColor=5eead4"/></a>
   <a href="https://www.linkedin.com/in/kah-yan-sim-3067141a3"><img src="https://img.shields.io/badge/LinkedIn-Kah%20Yan%20Sim-0d1630?style=for-the-badge&logo=linkedin&logoColor=60a5fa"/></a>
   <img src="https://img.shields.io/badge/Open%20to-IWSP%20May%202027-0d1630?style=for-the-badge&logoColor=f472b6"/>
 </p>
 
 ## 👋 Hi, I'm Kah Yan
 
-I build real-time software in **C++ and OpenGL**. I'm a Year 3 Computer Science student at the Singapore Institute of Technology (SIT), in the Real-Time Interactive Simulation (RTIS) degree run with DigiPen. Before that, I studied electronics and mechatronics and worked in a network operations centre, so I like knowing how things work from the hardware up.
+I build real-time rendering and simulation software in **C++, OpenGL and Unity (C#)**. I'm a Year 3 Computer Science student at the Singapore Institute of Technology (SIT), in the Real-Time Interactive Simulation (RTIS) degree run with DigiPen. Before that, I studied electronics and mechatronics and worked in a network operations centre, so I like knowing how things work from the hardware up.
 
-- 🗺️ **Now:** map rendering developer on a 9-person autonomous vehicle simulation team
+- 🚐 **Now:** rendering and simulation developer on **Formula 9**, an autonomous-shuttle fleet training simulator
 - 🎓 **Studying:** BSc Computer Science (RTIS), SIT-DigiPen, graduating April 2028
 - 🌐 **Before:** Network Operations Center intern at Westcon Group (Cisco Meraki)
 - 🔎 **Looking for:** a 1-year Integrated Work Study Programme (IWSP) placement from May 2027
 
 ## 🚗 Featured work
 
-### Autonomous Vehicle Simulation & Visualisation Platform
-`C++` `Qt` `OpenGL` · team of 9 · Sep 2026 to now
+### Formula 9: Autonomous Shuttle Fleet Training Simulator
+`C++` `Qt` `OpenGL` → `Unity` `C#` · team project · Sep 2026 to now · [repo](https://github.com/axewhy-xy/Formula9)
 
-A real-time simulation that shows autonomous vehicles driving through a city map. **My part: the map renderer.**
-- Built the OpenGL renderer (shaders, geometry upload, per-frame draw loop) that draws roads, buildings and points of interest, and integrated it into the main Qt app
-- Built the map camera: pan and zoom that stay anchored to the cursor, and screen-to-ground coordinate conversion
-- Cut repeated database queries with zoom-based level-of-detail filtering and cached bounds, checked with timing logs
-- Added route playback: the planned route and an animated vehicle marker, synced to each frame
+A training simulator where operators run a fleet of autonomous shuttles through a real Singapore neighbourhood. The team started with a native C++/Qt/OpenGL app and moved to Unity in late October. **I built the city's rendering and the life on its streets, one milestone at a time:**
+
+- **Milestone 1: map renderer and camera** (C++, Qt, OpenGL). Wrote the OpenGL renderer that draws the road network from a road database, with roads coloured by type. Built a camera with pan, cursor-anchored zoom and fit-to-data, and level-of-detail rules that hide minor roads when zoomed out and re-query only when the view changes. Played back an ego vehicle's route from KITTI driving data on the map.
+- **Milestone 2: vehicles and vehicle AI** (Unity, C#). Brought textured car, taxi, bus, truck and van models into the city. Drew them with GPU instancing and per-camera frustum culling, so only what a camera can see gets drawn. Traffic follows the backend's simulation when it sends frames. When it doesn't, my fallback driver takes over: it picks routes at junctions, avoids roads with hazards, keeps large vehicles off service roads, and smooths lane changes so cars steer instead of snapping.
+- **Milestone 3: pedestrians and pedestrian AI** (Unity, C#). Built a walkable network of pavements beside every road and joined it at junction corners. People cross only at mapped crossings, and at signalled ones only while the traffic they cross has a red light. Each character model is baked into a few walk and idle poses and drawn as batched instances, with no per-person GameObjects, Animators or skinning, so a whole crowd stays cheap to draw.
 
 ### Sudoku Rush: Networked Multiplayer Game
 `C++` `Win32` `TCP/UDP` `SQLite` · team of 2 · Mar 2026
@@ -43,7 +43,7 @@ Handled support tickets across Cisco Meraki, Palo Alto, Juniper and F5, alerted 
 ## 🛠️ Tech stack
 
 <p>
-  <img src="https://skillicons.dev/icons?i=cpp,c,opengl,qt,cmake,visualstudio,linux,aws,unity,dart,androidstudio,sqlite,html,git&theme=dark"/>
+  <img src="https://skillicons.dev/icons?i=cpp,c,cs,opengl,unity,qt,cmake,visualstudio,linux,aws,dart,androidstudio,sqlite,html,git&theme=dark"/>
 </p>
 
 <!-- SNAKE: uncomment after the snake workflow has run once

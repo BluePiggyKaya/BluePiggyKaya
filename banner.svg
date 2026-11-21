@@ -18,7 +18,7 @@
     </filter>
     <clipPath id="type">
       <rect x="40" y="178" height="32" width="0">
-        <animate attributeName="width" values="0;540;540;0" keyTimes="0;0.4;0.9;1" dur="8s" repeatCount="indefinite"/>
+        <animate attributeName="width" values="0;560;560;0" keyTimes="0;0.4;0.9;1" dur="8s" repeatCount="indefinite"/>
       </rect>
     </clipPath>
   </defs>
@@ -90,10 +90,10 @@
     <text x="40" y="70" font-size="18" fill="#4ade80">kahyan@sit-digipen:~$ <tspan fill="#cbd5e1">./map_renderer --whoami</tspan></text>
     <text x="40" y="150" font-size="64" font-weight="700" fill="url(#name)" filter="url(#glow)">SIM KAH YAN</text>
     <g clip-path="url(#type)">
-      <text x="40" y="202" font-size="22" fill="#e2e8f0">C++ · OpenGL · Qt · real-time simulation</text>
+      <text x="40" y="202" font-size="22" fill="#e2e8f0">C++ · OpenGL · Unity · real-time simulation</text>
     </g>
     <rect x="40" y="182" width="12" height="26" fill="#5eead4">
-      <animate attributeName="x" values="40;580;580;40" keyTimes="0;0.4;0.9;1" dur="8s" repeatCount="indefinite"/>
+      <animate attributeName="x" values="40;600;600;40" keyTimes="0;0.4;0.9;1" dur="8s" repeatCount="indefinite"/>
       <animate attributeName="opacity" values="1;0;1" dur="1s" repeatCount="indefinite"/>
     </rect>
     <text x="40" y="250" font-size="16" fill="#64748b">// Year 3 Computer Science (RTIS) @ SIT-DigiPen Singapore</text>
