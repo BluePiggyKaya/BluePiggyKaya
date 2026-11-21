@@ -4,7 +4,7 @@
 
 <p align="center">
   <a href="mailto:simkah222@gmail.com"><img src="https://img.shields.io/badge/Email-simkah222%40gmail.com-0d1630?style=for-the-badge&logo=gmail&logoColor=5eead4"/></a>
-  <a href="https://www.linkedin.com/in/kah-yan-sim-3067141a3"><img src="https://img.shields.io/badge/LinkedIn-Kah%20Yan%20Sim-0d1630?style=for-the-badge&logo=linkedin&logoColor=60a5fa"/></a>
+  <a href="https://www.linkedin.com/in/kah-yan-sim"><img src="https://img.shields.io/badge/LinkedIn-Kah%20Yan%20Sim-0d1630?style=for-the-badge&logo=linkedin&logoColor=60a5fa"/></a>
   <img src="https://img.shields.io/badge/Open%20to-IWSP%20May%202027-0d1630?style=for-the-badge&logoColor=f472b6"/>
 </p>
 
