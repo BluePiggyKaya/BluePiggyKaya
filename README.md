@@ -46,7 +46,7 @@ An algorithms project that resizes images without squashing what matters, by rem
 - Wrote the DP recurrence with backtracking, vectorised with NumPy so each row is computed in one step instead of pixel by pixel, plus horizontal seams by reusing the vertical finder on the transposed image
 - Made the demo app safer to use: rejects images it can't decode, shows how many seams a resize will remove, warns before slow DP resizes, stops graph cut on images it can't handle, and reports how long each resize took
 
-▶️ [Watch the demo](https://youtu.be/3gPar0sKfHI)
+🌐 **[Try it live in your browser](https://kahyan-seam-carving.streamlit.app/)** · ▶️ [Watch the demo](https://youtu.be/3gPar0sKfHI)
 
 ### Sudoku Rush: Networked Multiplayer Game
 `C++` `Win32` `TCP/UDP` `SQLite` · team of 2 · Mar 2026
